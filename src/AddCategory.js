@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 
-const AddCategory = () => {
+const AddCategory = ({ setCategories }) => {
     const [inputValue, setsetInputValue] = useState('')
     const handleInputChange = (e) => {
         setsetInputValue(e.target.value);
     }
     const handleFormSubmit = (e) => {
         e.preventDefault();
+        setCategories(categories => [...categories, inputValue]);
         setsetInputValue('');
     }
     return (
