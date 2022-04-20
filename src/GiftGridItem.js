@@ -2,9 +2,9 @@ import React from 'react'
 
 export const GiftGridItem = ({ id, title, image }) => {
     return (
-        <div>
+        <div className='card'>
             <img src={image} alt={title}></img>
-            <p>{id}</p>
+            <p>{id} - {title}</p>
         </div>
     )
 }

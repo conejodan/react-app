@@ -25,15 +25,15 @@ export const GiftGrid = ({ category }) => {
     }, []);
 
     return (
-        <div>
+        <>
             <h3>{category}</h3>
-            <ol>
+            <div className='card-grid'>
                 {images.map(item => {
                     return (
                         <GiftGridItem key={item.id} {...item}></GiftGridItem>
                     );
                 })}
-            </ol>
-        </div>
+            </div>
+        </>
     );
 }
