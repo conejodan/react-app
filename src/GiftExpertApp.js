@@ -1,5 +1,6 @@
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 import AddCategory from './AddCategory';
+import { GiftGrid } from './GiftGrid';
 
 const GiftExpertApp = () => {
     const [categories, setCategories] = useState(['Dragon Ball', 'Naruto', 'One Piece'])
@@ -9,7 +10,7 @@ const GiftExpertApp = () => {
             <AddCategory setCategories={setCategories} />
             <hr />
             <ol>
-                {categories.map(item => <li key={item}>{item}</li>)}
+                {categories.map(item => <GiftGrid key={item} category={item}></GiftGrid>)}
             </ol>
         </>
     )
